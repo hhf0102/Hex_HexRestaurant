@@ -1,0 +1,111 @@
+.header {
+    width: 100%;
+    height: $headerHeight;
+    @include picSetting('../imgs/header_desktop.png');
+    nav {
+        display: flex;
+        justify-content: space-between;
+        height: $navHeight;
+        background: rgba(0, 0, 0, .8);
+        .logo {
+            margin-left: 42px;
+            line-height: $navHeight;
+            a {
+                img {
+                    transform: translateY(5px);
+                }
+            }
+            h1 {
+                @include hide-text;
+            }
+        }
+        .menu {
+            display: flex;
+            margin-right: 48px;
+            li {
+                width: $menuEachWidth;
+                text-align: center;
+                &:hover {
+                    background: $mainColor;
+                    cursor: pointer;
+                    a {
+                        color: white;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: gray;
+                    display: block;
+                    line-height: $navHeight;
+                }
+            }
+        }
+        .hambugarBar {
+            display: none;
+            color: white;
+            font-size: 24px;
+            margin: 16px 22px;
+        }
+    }
+    .title {
+        width: $titleWdith;
+        height: $titleHeight;
+        color: white;
+        background: rgba(0, 0, 0, .4);
+        text-align: center;
+        margin: 70px auto;
+        h2 {
+            font-size: 36px;
+            padding: 20px;
+        }
+        h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+@media (max-width: 414px) {
+    .header {
+        @include picSetting('../imgs/header_mobile.png');
+        nav {
+            position: relative;
+            .logo {
+                margin-left: 13px;
+            }
+            .hambugarBar {
+                display: block;
+            }
+            .menu {
+                position: absolute;
+                top: 100%;
+                display: block;
+                margin: 0;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s;
+                li {
+                    width: 100%;
+                    background: rgba(0, 0, 0, .6);
+                    text-align: left;
+                    padding-left: 10px;
+                    a {
+                        color: white;
+                    }
+                }
+                li:not(:last-child) {
+                    border-bottom: 2px solid gray;
+                }   
+            }
+            .menu.menu-show {
+                max-height: 170px;
+            }
+        }
+        .title {
+            width: 300px;
+            height: 194px;
+        }   
+    }
+}
