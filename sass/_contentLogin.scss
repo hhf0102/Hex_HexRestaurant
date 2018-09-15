@@ -1,54 +1,52 @@
 .contentLogin {
-    h2 {
-        font-size: 32px;
-        font-weight: bold;
-        text-align: center;
-        padding-top: 50px;
-        margin-bottom: 10px;
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 10px;
+  }
+  h4 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .login {
+    width: 300px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+    padding: 0 15px 30px 15px;
+    margin: 35px auto 10px auto;
+    border-top: 5px solid $mainColor;
+    display: flex;
+    flex-direction: column;
+    label {
+      margin-bottom: 5px;
     }
     h4 {
-        text-align: center;
-        font-size: 20px;
+      text-align: center;
+      margin: 15px 0;
     }
-    .login {
-        width: 300px;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
-        padding: 0 15px 30px 15px;
-        margin: 35px auto 10px auto;
-        border-top: 5px solid $mainColor;
-        display: flex;
-        flex-direction: column;
-        label {
-            margin-bottom: 5px;
-        }
-        h4 {
-            text-align: center;
-            margin: 15px 0;
-        }
-        input {
-            border: 2px solid rgb(199, 199, 199);
-            border-radius: 5px;
-            height: 24px;
-            outline: none;
-            font-size: 100%;
-            margin-bottom: 10px;
-        }
-        a {
-            color: $mainColor;
-            text-decoration: none;
-        }
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            .signUpBtn {
-                @include btn(125px, 32px, rgb(206, 203, 203));
-            }
-            .signInBtn {
-                @include btn(125px, 32px, $mainColor);
-            }
-        }
+    input {
+      border: 2px solid rgb(199, 199, 199);
+      border-radius: 5px;
+      height: 24px;
+      outline: none;
+      font-size: 100%;
+      margin-bottom: 10px;
     }
+    a {
+      color: $mainColor;
+      text-decoration: none;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      .signUpBtn {
+        @include btn(125px, 32px, rgb(206, 203, 203));
+      }
+      .signInBtn {
+        @include btn(125px, 32px, $mainColor);
+      }
+    }
+  }
 }
-
-
